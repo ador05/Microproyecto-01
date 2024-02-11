@@ -26,6 +26,16 @@ body {
     text-justify: inter-word;
     margin: 0;
   }
+  
+  .section01 input{
+    width: 250px;
+    height: 30px;
+    font-size: 16px;
+  }
+
+  .section01 div {
+    font-size: 18px;
+  }
 
   .section01__left {
     display: flex;
