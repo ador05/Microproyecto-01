@@ -11,9 +11,9 @@
 <body>
     <!--Seccion 01-->
     <section class="section01"; id="Inicio">
-        
-        <div class="section01__left">
-            <h1>Bingo Unimet</h1>
+    
+            <div class="section01__left">
+            <h1 class="center1">Bingo UNIMET</h1>
             <p>
                 El bingo es un juego de azar muy popular en el que los jugadores compiten para completar un patrón específico de números en sus cartones. El juego se juega con un bombo que contiene bolas numeradas, y un jugador que va sacando las bolas al azar y cantando los números en voz alta. Los jugadores tienen cartones con una cuadrícula de números, y cada número coincide con una bola en el bombo. A medida que se van sacando las bolas, los jugadores van tachando los números que coinciden en sus cartones. El primer jugador que completa el patrón predefinido en su cartón gana el premio.
             </p>
@@ -21,30 +21,17 @@
                 Objetivo del juego: Completar un cartón antes que los demás jugadores.
             </p>
             <p>
-                Para jugar el Bingo Unimet Online haz click en el boton: <button><a href="#Inicio_juego"; style="color: white">Juega Hoy</a></button>
-            </p>
-            <p>
-                Para ver los puntajes Historicos del juego haz click en el boton: <button><a href="#Puntajes_Historicos" style="color: white;">Puntajes Historicos</a></button>
-            </p>
-            <p>
-                <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+                Para jugar el Bingo Unimet Online haz click en el boton: <button onclick="openindex2()"><a style="color: white">Juega Hoy</a></button>
             </p>
         </div>
         
-            
-        
-        <!--posible imagen para agregar-->
-        <!--<div class="section01__right">
-            <img src="./img_01.jpg" alt="Imagen de la unimet" />
-        
-    -->
 
     </section>
 
     <!--Seccion 02 ver puntajes historicos-->
     <section class="section01"; id="Puntajes_Historicos">
         <div class="section01__left">
-            <h2>Puntajes Historicos</h2>
+            <h2>Leaderboard</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et libero ex. Donec pellentesque elit sit amet nisl pharetra, sed ornare augue ullamcorper. Proin molestie aliquam magna id blandit. Nam bibendum enim quis felis lacinia congue non et lacus. Curabitur fringilla ultricies suscipit. Vestibulum rutrum tempus aliquet. Praesent tincidunt augue eu malesuada tristique. Donec neque odio, dapibus sed nisi condimentum, commodo ornare justo. Morbi velit diam, bibendum hendrerit orci ut, pulvinar finibus tellus. Duis tincidunt augue eu euismod tincidunt. Suspendisse iaculis dolor non dictum viverra. Morbi ipsum ex, auctor vitae sem sit amet, aliquet vehicula lectus. Cras ac nisi quis lectus fermentum accumsan.</p>
             <p>Nam gravida, leo a vehicula mollis, ante eros blandit nunc, ut interdum ipsum nunc in ipsum. Nullam magna quam, cursus a sem nec, tincidunt porta diam. Aenean nec risus nisl. Morbi nec vestibulum sapien. Donec non malesuada velit. Quisque magna libero, aliquet nec velit ac, pellentesque volutpat nibh. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
             <button><a href="#Inicio" style="color: white;">Volver al Inicio</a></button>
@@ -52,71 +39,7 @@
         </div>
     </section>
 
-    <!--Seccion 03 Inicio de juego-->
-    <section class="section01"; id="Inicio_juego">
-        <div class="section01__left">
-            <h2>Bingo Unimet</h2>
-            <p>Para empezar a jugar, introduzca los nombres los cuatro jugadores:</p>
-            
-            <label>
-                <div class="section01__left">Nombre 01:</div>
-                <input
-                  type="text"
-                  placeholder="Ingrese un nombre"
-                  id="input-nombre1"
-                />
-              </label>
-              <label>
-                <div class="section01__left">Nombre 02:</div>
-                <input
-                  type="text"
-                  placeholder="Ingrese un nombre"
-                  id="input-nombre2"
-                />
-              </label>
-              <label>
-                <div class="section01__left">Nombre 03:</div>
-                <input
-                  type="text"
-                  placeholder="Ingrese un nombre"
-                  id="input-nombre3"
-                />
-              </label>
-              <label>
-                <div class="section01__left">Nombre 04:</div>
-                <input
-                  type="text"
-                  placeholder="Ingrese un nombre"
-                  id="input-nombre4"
-                />
-              </label>
-            
-            <p>Se puede jugar con cartones de tamaños entre 3x3, 4x4 y 5x5, para elegir el tamaño ingrese un numero entre 3 y 5:</p>
-            <label>
-                <div class="section01__left">Tamaño:</div>
-                <input
-                  type="number"
-                  placeholder="Ingrese un numero entre 3 y 5"
-                  id="input-tamano"
-                  min="3"
-                  max="5"
-                />
-              </label>
-              <button onclick="validateGame()"><a href="#Juego" style="color: white;">¡A jugar!</a></button>
-            <button>
-                <a href="#Inicio" style="color: white;">Volver al Inicio</a>
-                
-            </button>
-            <p><br/><br/><br/><br/><br/><br/><br/><br/><br/></p>
-
-        </div>    
-            
-    </section>
     
-    <!--Seccion 04 Bingo-->
-    <section class="section01">
-
-    </section>
     
     <!-- Vinculamos archivo JavaScript -->
     <script src="./script.js"></script>

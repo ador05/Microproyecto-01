@@ -1,3 +1,4 @@
+
 function validateGame() {
     const name01 = document.getElementById("input-nombre1").value;
 
@@ -8,11 +9,21 @@ function validateGame() {
     const name04 = document.getElementById("input-nombre4").value;
     
     const tamano = document.getElementById("input-tamano").value;
-    alert(tamano)
-    if(name01 == "" || name02 == "" || name03== "" || name04==""){
-        alert("Names are missing");
+
+    let verify1 = true;
+    
+    if(name01  == "" || name02 == "" || name03== "" || name04==""){
+        alert("Faltan Nombres");
+        verify1=false;
+        
     }
-    else if(tamano.int = "" || tamano.int < 3 || tamano > 5){
-        alert("Tamaño introducido incorrecto, debe ser entre 3 y 5");
+    
+    if (verify1){
+        //window.location.href = "./index2.html";
     }
+    
+}
+
+function openindex2(){
+    window.location.href = "./index2.html";
 }
