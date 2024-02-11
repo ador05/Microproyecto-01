@@ -119,6 +119,14 @@ body {
     width: 400px;
     height: 300px;
   }
+
+   #mycanvas {
+    position: absolute;
+    top: 50px;
+    left: 100px;
+    width: 600px;
+    height: 300px;
+  }
   
   .section01__right img {
     width: 100%;
@@ -133,16 +141,31 @@ body {
     }
   }
 
-  .grid-container {
+  .grid-container3 {
     display: grid;
-    grid-template-columns: auto auto auto;
-    background-color: #2196F3;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    background-color: purple;
+    padding: 10px;
+  }
+  .grid-container4 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    background-color: purple;
+    padding: 10px;
+  }
+  .grid-container5 {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); 
+    grid-template-rows: repeat(5, 1fr);
+    background-color: purple;
     padding: 10px;
   }
   .grid-item {
     background-color: rgba(255, 255, 255, 0.8);
     border: 1px solid rgba(0, 0, 0, 0.8);
-    padding: 20px;
+    padding: 10px;
     font-size: 30px;
     text-align: center;
   }
