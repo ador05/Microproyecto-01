@@ -34,6 +34,7 @@ body {
     border-radius: 4px;
     transition: 300ms ease-in-out all;
   }
+
   
   
   .section01 div.input {
@@ -82,7 +83,7 @@ body {
   .section01__left {
     display: flex;
     flex-direction: column;
-    gap: 32px;
+    gap: 33px;
   
     justify-content: center;
     align-items: start;
@@ -116,7 +117,7 @@ body {
 
   .section01__right {
     width: 400px;
-    height: 200px;
+    height: 300px;
   }
   
   .section01__right img {
