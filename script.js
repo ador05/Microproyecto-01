@@ -26,6 +26,80 @@ function matrizcuadrada(numbers) {
     return matrix;
   }
 
+function actualizarpuntajes(){
+    
+
+    let name01 = localStorage.getItem("jugador01");
+    let name02 = localStorage.getItem("jugador02");
+    let name03 = localStorage.getItem("jugador03");
+    let name04 = localStorage.getItem("jugador04");
+
+    let puntaje01 = localStorage.getItem("jugador01_puntos");
+    let puntaje02 = localStorage.getItem("jugador02_puntos");
+    let puntaje03 = localStorage.getItem("jugador03_puntos");
+    let puntaje04 = localStorage.getItem("jugador04_puntos");
+    console.log("nombres");
+    console.log(name01);
+    console.log(name02);
+    console.log(name03);
+    console.log(name04);
+
+    console.log("puntajes importados");
+    console.log(puntaje01);
+    console.log(puntaje02);
+    console.log(puntaje03);
+    console.log(puntaje04);
+
+    let comparador5 = 0;
+    let ganadores = 0;
+
+    if (comparador5 < parseInt(puntaje01)){
+        comparador5 = parseInt(puntaje01);
+
+    }else if(comparador5 > parseInt(puntaje02)){
+        comparador5 = parseInt(puntaje02);
+
+    }else if(comparador5 < parseInt(puntaje03)){
+        comparador5 = parseInt(puntaje03);
+    }else if(comparador5 < parseInt(puntaje4)){
+        comparador5 = parseInt(puntaje03);
+    }
+
+    if (comparador5 == parseInt(puntaje01)){
+        ganadores++;
+
+    }else if(comparador5 == parseInt(puntaje02)){
+        ganadores++;
+
+    }else if(comparador5 == parseInt(puntaje03)){
+        ganadores++;
+
+    }else if(comparador5 == parseInt(puntaje04)){
+        ganadores++;
+
+    }
+    if (ganadores > 1){
+        document.getElementById("leaderboard").textContent = `Empate: no hubo Ganador. Puntajes:`+ name01.toString()+ `: `+puntaje01.toString()+`    `+ name02.toString() + `: `+ puntaje02.toString()+`     `+ name03.toString()+`: `+puntaje03.toString()+`    `+ name04.toString()+`: `+puntaje04.toString();
+
+    }else{
+        
+        if (comparador5 == parseInt(puntaje01)){
+            document.getElementById("leaderboard").textContent = `Ganador: `+ name01.toString() +`     Puntajes:`+ name01.toString()+ `: `+puntaje01.toString()+`    `+ name02.toString() + `: `+ puntaje02.toString()+`     `+ name03.toString()+`: `+puntaje03.toString()+`    `+ name04.toString()+`: `+puntaje04.toString();
+    
+        }else if(comparador5 == parseInt(puntaje02)){
+            document.getElementById("leaderboard").textContent = `Ganador: `+ name02.toString() +`     Puntajes:`+ name01.toString()+ `: `+puntaje01.toString()+`    `+ name02.toString() + `: `+ puntaje02.toString()+`     `+ name03.toString()+`: `+puntaje03.toString()+`    `+ name04.toString()+`: `+puntaje04.toString();    
+        }else if(comparador5 == parseInt(puntaje03)){
+            document.getElementById("leaderboard").textContent = `Ganador: `+ name03.toString() +`     Puntajes:`+ name01.toString()+ `: `+puntaje01.toString()+`    `+ name02.toString() + `: `+ puntaje02.toString()+`     `+ name03.toString()+`: `+puntaje03.toString()+`    `+ name04.toString()+`: `+puntaje04.toString();
+    
+        }else if(comparador5 == parseInt(puntaje4)){
+            document.getElementById("leaderboard").textContent = `Ganador: `+ name04.toString() +`     Puntajes:`+ name01.toString()+ `: `+puntaje01.toString()+`    `+ name02.toString() + `: `+ puntaje02.toString()+`     `+ name03.toString()+`: `+puntaje03.toString()+`    `+ name04.toString()+`: `+puntaje04.toString();
+    }
+    }
+
+
+
+}
+
 function validateGame() {
     const name01 = document.getElementById("input-nombre1").value;
 
@@ -225,9 +299,28 @@ function sacarbola()    {
         let puntaje_jugador2 = sacarpuntaje(2, values);
         let puntaje_jugador3 = sacarpuntaje(3, values);
         let puntaje_jugador4 = sacarpuntaje(4, values);
+
+        console.log("Puntajes:");
+        console.log(puntaje_jugador1);
+        console.log(puntaje_jugador2);
+        console.log(puntaje_jugador3);
+        console.log(puntaje_jugador4);
+
+        localStorage.setItem("jugador01_puntos", puntaje_jugador1);
+        localStorage.setItem("jugador02_puntos", puntaje_jugador2);
+        localStorage.setItem("jugador03_puntos", puntaje_jugador3);
+        localStorage.setItem("jugador04_puntos", puntaje_jugador4);
+
+        localStorage.setItem("jugador01", name01);
+        localStorage.setItem("jugador02", name02);
+        localStorage.setItem("jugador03", name03);
+        localStorage.setItem("jugador04", name04);
+
         
-        document.getElementById("puntajes1").textContent = `¡Se termino el juego!\n puntajes: \n`+name01.toString() + `:` + puntaje_jugador1.toString() +`pts\n`+name02.toString() + `:`+puntaje_jugador2.toString()+`pts\n`+name03.toString() + `:`+puntaje_jugador3.toString()+`pts\n`+name04.toString() + `:`+puntaje_jugador4.toString()`pts`;
+        
+        document.getElementById("puntajes1").textContent = `¡Se termino el juego!\n puntajes: \n`+name01.toString() + `:` + puntaje_jugador1.toString() +`pts\n`+name02.toString() + `:`+puntaje_jugador2.toString()+`pts\n`+name03.toString() + `:`+puntaje_jugador3.toString()+`pts\n`+name04.toString() + `:`+puntaje_jugador4.toString()+`pts`;
     }
+    
     else{
         
         localStorage.setItem("counter", counter);

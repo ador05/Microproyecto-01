@@ -118,6 +118,7 @@ body {
   .section01__right {
     width: 400px;
     height: 300px;
+    align-items: flex-end;
   }
 
    #mycanvas {
